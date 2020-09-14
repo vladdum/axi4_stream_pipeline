@@ -1,11 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[19]:
-
-
 import numpy as np
-get_ipython().run_line_magic('matplotlib', 'inline')
 from matplotlib import pyplot as plt
 import cv2
 
@@ -37,15 +30,6 @@ for x in range(0,size[0]):
         z = str('{0:0{1}X}'.format(R[x,y],2)+'{0:0{1}X}'.format(G[x,y],2)+'{0:0{1}X}'.format(B[x,y],2))
         f.write(z+"\n")
 f.close()
-
-
-# In[26]:
-
-
-import numpy as np
-get_ipython().run_line_magic('matplotlib', 'inline')
-from matplotlib import pyplot as plt
-import cv2
 
 img_golden = cv2.imread("lenna.png")
 img_golden = cv2.cvtColor(img_golden, cv2.COLOR_BGR2GRAY)
@@ -93,10 +77,3 @@ plt.title('HW Result'), plt.xticks([]), plt.yticks([])
 #plt.subplot(2,2,(3,4)), plt.imshow(np.abs(img_rtl - img_golden),cmap='gray',vmin=0,vmax=255)
 #plt.title('Delta (max =' + str(np.max(img_delta)) + ')'), plt.xticks([]), plt.yticks([])
 plt.show()
-
-
-# In[ ]:
-
-
-
-
